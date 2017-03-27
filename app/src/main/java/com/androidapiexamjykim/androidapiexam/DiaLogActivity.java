@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.androidapiexamjykim.androidapiexam.Model.WeatherModel;
 import com.androidapiexamjykim.androidapiexam.Model2.List;
+import com.androidapiexamjykim.androidapiexam.Model2.Weather;
 import com.androidapiexamjykim.androidapiexam.Model2.WeatherModel2;
 
 import java.util.ArrayList;
@@ -58,9 +59,9 @@ public class DiaLogActivity extends AppCompatActivity {
                     return fragment;
 
                 case 1:
+                    WeatherModel2 mWeatherData = (WeatherModel2) getIntent().getSerializableExtra("data2");
                     final ViewPagerTwoFragment fragment1 = ViewPagerTwoFragment
-                            .newInstance(((ArrayList<List>).get(ArrayList<List>.getDtTxt().toString())) getIntent()
-                                    .getSerializableExtra("data2"));
+                            .newInstance((ArrayList<List>) mWeatherData.getList());
                     return fragment1;
             }
             return null;

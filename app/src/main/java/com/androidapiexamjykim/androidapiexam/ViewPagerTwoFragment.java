@@ -11,6 +11,7 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.androidapiexamjykim.androidapiexam.Model2.List;
+import com.androidapiexamjykim.androidapiexam.Model2.Weather;
 
 import java.util.ArrayList;
 
@@ -42,7 +43,8 @@ public class ViewPagerTwoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_viewpager_two, container, false);
 
-        mWeatherData = (ArrayList<List>) getArguments().getSerializable("weather");
+        Bundle bundle = getArguments();
+        mWeatherData = (ArrayList<List>) bundle.getSerializable("weather");
         mListView = (ExpandableListView) view.findViewById(R.id.expand_list);
         mAdepter = new ListViewAdapter(mWeatherData);
         mListView.setAdapter(mAdepter);
