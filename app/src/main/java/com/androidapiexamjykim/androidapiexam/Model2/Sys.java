@@ -1,9 +1,10 @@
 
 package com.androidapiexamjykim.androidapiexam.Model2;
 
-import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 public class Sys implements Serializable
 {
@@ -21,4 +22,10 @@ public class Sys implements Serializable
         this.pod = pod;
     }
 
+    @Override
+    public String toString() {
+        return "Sys{" +
+                "pod='" + pod + '\'' +
+                '}';
+    }
 }

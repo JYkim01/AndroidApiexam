@@ -10,6 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.androidapiexamjykim.androidapiexam.Model.WeatherModel;
+import com.androidapiexamjykim.androidapiexam.Model2.List;
+import com.androidapiexamjykim.androidapiexam.Model2.WeatherModel2;
+
+import java.util.ArrayList;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static android.media.CamcorderProfile.get;
 
 public class DiaLogActivity extends AppCompatActivity {
 
@@ -26,6 +33,9 @@ public class DiaLogActivity extends AppCompatActivity {
 
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
+
+        mTabLayout.setupWithViewPager(mViewPager);
+
     }
 
     public void onClick(View v) {
@@ -42,21 +52,23 @@ public class DiaLogActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    ViewPagerOneFragment fragment = ViewPagerOneFragment
+                    final ViewPagerOneFragment fragment = ViewPagerOneFragment
                             .newInstance((WeatherModel) getIntent()
                                     .getSerializableExtra("data"));
                     return fragment;
 
                 case 1:
-                    System.out.println("");
-
+                    final ViewPagerTwoFragment fragment1 = ViewPagerTwoFragment
+                            .newInstance(((ArrayList<List>).get(ArrayList<List>.getDtTxt().toString())) getIntent()
+                                    .getSerializableExtra("data2"));
+                    return fragment1;
             }
             return null;
         }
 
         @Override
         public int getCount() {
-            return 1;
+            return 2;
         }
     }
 }

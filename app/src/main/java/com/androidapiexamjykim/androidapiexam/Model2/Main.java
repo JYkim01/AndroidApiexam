@@ -1,101 +1,115 @@
 
 package com.androidapiexamjykim.androidapiexam.Model2;
 
-import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 public class Main implements Serializable
 {
 
     @SerializedName("temp")
     @Expose
-    private Double temp;
+    private String temp;
     @SerializedName("temp_min")
     @Expose
-    private Double tempMin;
+    private String tempMin;
     @SerializedName("temp_max")
     @Expose
-    private Double tempMax;
+    private String tempMax;
     @SerializedName("pressure")
     @Expose
-    private Double pressure;
+    private String pressure;
     @SerializedName("sea_level")
     @Expose
-    private Double seaLevel;
+    private String seaLevel;
     @SerializedName("grnd_level")
     @Expose
-    private Double grndLevel;
+    private String grndLevel;
     @SerializedName("humidity")
     @Expose
-    private Integer humidity;
+    private String humidity;
     @SerializedName("temp_kf")
     @Expose
-    private Double tempKf;
-    private final static long serialVersionUID = -7697158831587011788L;
+    private String tempKf;
+    private final static long serialVersionUID = -8080763780272412040L;
 
-    public Double getTemp() {
+    public String getTemp() {
         return temp;
     }
 
-    public void setTemp(Double temp) {
+    public void setTemp(String temp) {
         this.temp = temp;
     }
 
-    public Double getTempMin() {
+    public String getTempMin() {
         return tempMin;
     }
 
-    public void setTempMin(Double tempMin) {
+    public void setTempMin(String tempMin) {
         this.tempMin = tempMin;
     }
 
-    public Double getTempMax() {
+    public String getTempMax() {
         return tempMax;
     }
 
-    public void setTempMax(Double tempMax) {
+    public void setTempMax(String tempMax) {
         this.tempMax = tempMax;
     }
 
-    public Double getPressure() {
+    public String getPressure() {
         return pressure;
     }
 
-    public void setPressure(Double pressure) {
+    public void setPressure(String pressure) {
         this.pressure = pressure;
     }
 
-    public Double getSeaLevel() {
+    public String getSeaLevel() {
         return seaLevel;
     }
 
-    public void setSeaLevel(Double seaLevel) {
+    public void setSeaLevel(String seaLevel) {
         this.seaLevel = seaLevel;
     }
 
-    public Double getGrndLevel() {
+    public String getGrndLevel() {
         return grndLevel;
     }
 
-    public void setGrndLevel(Double grndLevel) {
+    public void setGrndLevel(String grndLevel) {
         this.grndLevel = grndLevel;
     }
 
-    public Integer getHumidity() {
+    public String getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(Integer humidity) {
+    public void setHumidity(String humidity) {
         this.humidity = humidity;
     }
 
-    public Double getTempKf() {
+    public String getTempKf() {
         return tempKf;
     }
 
-    public void setTempKf(Double tempKf) {
+    public void setTempKf(String tempKf) {
         this.tempKf = tempKf;
     }
 
+    @Override
+    public String toString() {
+        return "Main{" +
+                "temp='" + temp + '\'' +
+                ", tempMin='" + tempMin + '\'' +
+                ", tempMax='" + tempMax + '\'' +
+                ", pressure='" + pressure + '\'' +
+                ", seaLevel='" + seaLevel + '\'' +
+                ", grndLevel='" + grndLevel + '\'' +
+                ", humidity='" + humidity + '\'' +
+                ", tempKf='" + tempKf + '\'' +
+                '}';
+    }
 }

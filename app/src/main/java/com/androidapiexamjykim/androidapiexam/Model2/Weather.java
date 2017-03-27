@@ -1,9 +1,10 @@
 
 package com.androidapiexamjykim.androidapiexam.Model2;
 
-import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 public class Weather implements Serializable
 {
@@ -54,4 +55,13 @@ public class Weather implements Serializable
         this.icon = icon;
     }
 
+    @Override
+    public String toString() {
+        return "Weather{" +
+                "id=" + id +
+                ", main='" + main + '\'' +
+                ", description='" + description + '\'' +
+                ", icon='" + icon + '\'' +
+                '}';
+    }
 }

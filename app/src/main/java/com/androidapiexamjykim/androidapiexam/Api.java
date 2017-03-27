@@ -23,8 +23,8 @@ public interface Api {
 
     @GET("forecast")
     Call<WeatherModel2> getJson2(@Query("APPID") String appId,
-                                @Query("lat") double lat,
-                                @Query("lon") double lon);
+                                 @Query("lat") double lat,
+                                 @Query("lon") double lon);
 
 
 }

@@ -1,24 +1,31 @@
 
 package com.androidapiexamjykim.androidapiexam.Model2;
 
-import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 public class Clouds implements Serializable
 {
 
     @SerializedName("all")
     @Expose
-    private Integer all;
+    private String all;
     private final static long serialVersionUID = 8852868845898850336L;
 
-    public Integer getAll() {
+    public String getAll() {
         return all;
     }
 
-    public void setAll(Integer all) {
+    public void setAll(String all) {
         this.all = all;
     }
 
+    @Override
+    public String toString() {
+        return "Clouds{" +
+                "all='" + all + '\'' +
+                '}';
+    }
 }

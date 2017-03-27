@@ -1,91 +1,79 @@
 
 package com.androidapiexamjykim.androidapiexam.Model2;
 
-import java.io.Serializable;
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 public class WeatherModel2 implements Serializable
 {
 
-    @SerializedName("dt")
+    @SerializedName("cod")
     @Expose
-    private Integer dt;
-    @SerializedName("main")
+    private String cod;
+    @SerializedName("message")
     @Expose
-    private Main main;
-    @SerializedName("weather")
+    private String message;
+    @SerializedName("cnt")
     @Expose
-    private List<Weather> weather = null;
-    @SerializedName("clouds")
+    private String cnt;
+    @SerializedName("list")
     @Expose
-    private Clouds clouds;
-    @SerializedName("wind")
+    private java.util.List<List> list = null;
+    @SerializedName("city")
     @Expose
-    private Wind wind;
-    @SerializedName("sys")
-    @Expose
-    private Sys sys;
-    @SerializedName("dt_txt")
-    @Expose
-    private String dtTxt;
-    private final static long serialVersionUID = -4305032538587776598L;
+    private City city;
+    private final static long serialVersionUID = 4437125031390286641L;
 
-    public Integer getDt() {
-        return dt;
+    public String getCod() {
+        return cod;
     }
 
-    public void setDt(Integer dt) {
-        this.dt = dt;
+    public void setCod(String cod) {
+        this.cod = cod;
     }
 
-    public Main getMain() {
-        return main;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMain(Main main) {
-        this.main = main;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public List<Weather> getWeather() {
-        return weather;
+    public String getCnt() {
+        return cnt;
     }
 
-    public void setWeather(List<Weather> weather) {
-        this.weather = weather;
+    public void setCnt(String cnt) {
+        this.cnt = cnt;
     }
 
-    public Clouds getClouds() {
-        return clouds;
+    public java.util.List<List> getList() {
+        return list;
     }
 
-    public void setClouds(Clouds clouds) {
-        this.clouds = clouds;
+    public void setList(java.util.List<List> list) {
+        this.list = list;
     }
 
-    public Wind getWind() {
-        return wind;
+    public City getCity() {
+        return city;
     }
 
-    public void setWind(Wind wind) {
-        this.wind = wind;
+    public void setCity(City city) {
+        this.city = city;
     }
 
-    public Sys getSys() {
-        return sys;
+    @Override
+    public String toString() {
+        return "WeatherModel2{" +
+                "cod='" + cod + '\'' +
+                ", message='" + message + '\'' +
+                ", cnt='" + cnt + '\'' +
+                ", list=" + list +
+                ", city=" + city +
+                '}';
     }
-
-    public void setSys(Sys sys) {
-        this.sys = sys;
-    }
-
-    public String getDtTxt() {
-        return dtTxt;
-    }
-
-    public void setDtTxt(String dtTxt) {
-        this.dtTxt = dtTxt;
-    }
-
 }
