@@ -11,7 +11,6 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.androidapiexamjykim.androidapiexam.Model2.List;
-import com.androidapiexamjykim.androidapiexam.Model2.Weather;
 
 import java.util.ArrayList;
 
@@ -90,9 +89,7 @@ class ListViewAdapter extends BaseExpandableListAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        String data = (String) getGroup(groupPosition);
-        viewHolder.group.setText(data);
-
+        viewHolder.group.setText(mGroupData.get(groupPosition).getDtTxt());
 
         return convertView;
     }
@@ -133,11 +130,9 @@ class ListViewAdapter extends BaseExpandableListAdapter {
         viewHolder.humidity.setText(mGroupData.get(groupPosition).getMain().getHumidity());
         viewHolder.pressure.setText(mGroupData.get(groupPosition).getMain().getPressure());
         viewHolder.temp.setText(mGroupData.get(groupPosition).getMain().getTemp());
-        viewHolder.weather.setText(mGroupData.get(groupPosition).getWeather().toString());
+        viewHolder.weather.setText(mGroupData.get(groupPosition).getWeather().get(childPosition).getMain());
         viewHolder.windDag.setText(mGroupData.get(groupPosition).getWind().getDeg());
         viewHolder.windSpeed.setText(mGroupData.get(groupPosition).getWind().getSpeed());
-
-
 
         return convertView;
     }

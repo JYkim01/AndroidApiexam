@@ -36,8 +36,8 @@ public class Wind implements Serializable
     @Override
     public String toString() {
         return "Wind{" +
-                "speed='" + speed + '\'' +
-                ", deg='" + deg + '\'' +
+                "speed=" + speed +
+                ", deg=" + deg +
                 '}';
     }
 }

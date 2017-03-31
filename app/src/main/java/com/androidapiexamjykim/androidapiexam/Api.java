@@ -1,7 +1,7 @@
 package com.androidapiexamjykim.androidapiexam;
 
 import com.androidapiexamjykim.androidapiexam.Model.WeatherModel;
-import com.androidapiexamjykim.androidapiexam.Model2.WeatherModel2;
+import com.androidapiexamjykim.androidapiexam.Model2.Forecast;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -20,11 +20,11 @@ public interface Api {
     Call<WeatherModel> getJson(@Query("APPID") String appId,
                                @Query("lat") double lat,
                                @Query("lon") double lon);
-
+// api.openweathermap.org/data/2.5/forecast?APPID=32fb8e1d82d5ae7d4d58e28f4bd32f38&lat=35&lon=139
     @GET("forecast")
-    Call<WeatherModel2> getJson2(@Query("APPID") String appId,
-                                 @Query("lat") double lat,
-                                 @Query("lon") double lon);
+    Call<Forecast> getJson2(@Query("APPID") String appId,
+                            @Query("lat") double lat,
+                            @Query("lon") double lon);
 
 
 }

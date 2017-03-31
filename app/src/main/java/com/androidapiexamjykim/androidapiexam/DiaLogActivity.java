@@ -10,14 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.androidapiexamjykim.androidapiexam.Model.WeatherModel;
+import com.androidapiexamjykim.androidapiexam.Model2.Forecast;
 import com.androidapiexamjykim.androidapiexam.Model2.List;
-import com.androidapiexamjykim.androidapiexam.Model2.Weather;
-import com.androidapiexamjykim.androidapiexam.Model2.WeatherModel2;
 
 import java.util.ArrayList;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
-import static android.media.CamcorderProfile.get;
 
 public class DiaLogActivity extends AppCompatActivity {
 
@@ -59,9 +55,9 @@ public class DiaLogActivity extends AppCompatActivity {
                     return fragment;
 
                 case 1:
-                    WeatherModel2 mWeatherData = (WeatherModel2) getIntent().getSerializableExtra("data2");
+                    Forecast mForecast = (Forecast) getIntent().getSerializableExtra("data2");
                     final ViewPagerTwoFragment fragment1 = ViewPagerTwoFragment
-                            .newInstance((ArrayList<List>) mWeatherData.getList());
+                            .newInstance((ArrayList<List>) mForecast.getList());
                     return fragment1;
             }
             return null;
@@ -70,6 +66,20 @@ public class DiaLogActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return 2;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0 :
+                    String weatherData = "현재 날씨";
+                    return weatherData;
+
+                case 1 :
+                    String forecast = "날씨 예보";
+                    return forecast;
+            }
+            return null;
         }
     }
 }

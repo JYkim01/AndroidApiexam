@@ -5,9 +5,9 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
-public class List extends ArrayList<List> implements Serializable {
+public class List implements Serializable
+{
 
     @SerializedName("dt")
     @Expose
@@ -17,7 +17,7 @@ public class List extends ArrayList<List> implements Serializable {
     private Main main;
     @SerializedName("weather")
     @Expose
-    private java.util.List<com.androidapiexamjykim.androidapiexam.Model2.Weather> weather = null;
+    private java.util.List<Weather> weather = null;
     @SerializedName("clouds")
     @Expose
     private Clouds clouds;
@@ -51,11 +51,11 @@ public class List extends ArrayList<List> implements Serializable {
         this.main = main;
     }
 
-    public java.util.List<com.androidapiexamjykim.androidapiexam.Model2.Weather> getWeather() {
+    public java.util.List<Weather> getWeather() {
         return weather;
     }
 
-    public void setWeather(java.util.List<com.androidapiexamjykim.androidapiexam.Model2.Weather> weather) {
+    public void setWeather(java.util.List<Weather> weather) {
         this.weather = weather;
     }
 

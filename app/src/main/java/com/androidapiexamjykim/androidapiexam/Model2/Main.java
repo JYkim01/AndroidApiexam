@@ -102,14 +102,14 @@ public class Main implements Serializable
     @Override
     public String toString() {
         return "Main{" +
-                "temp='" + temp + '\'' +
-                ", tempMin='" + tempMin + '\'' +
-                ", tempMax='" + tempMax + '\'' +
-                ", pressure='" + pressure + '\'' +
-                ", seaLevel='" + seaLevel + '\'' +
-                ", grndLevel='" + grndLevel + '\'' +
-                ", humidity='" + humidity + '\'' +
-                ", tempKf='" + tempKf + '\'' +
+                "temp=" + temp +
+                ", tempMin=" + tempMin +
+                ", tempMax=" + tempMax +
+                ", pressure=" + pressure +
+                ", seaLevel=" + seaLevel +
+                ", grndLevel=" + grndLevel +
+                ", humidity=" + humidity +
+                ", tempKf=" + tempKf +
                 '}';
     }
 }

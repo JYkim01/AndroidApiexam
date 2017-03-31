@@ -25,7 +25,7 @@ public class Rain implements Serializable
     @Override
     public String toString() {
         return "Rain{" +
-                "_3h='" + _3h + '\'' +
+                "_3h=" + _3h +
                 '}';
     }
 }

@@ -25,7 +25,7 @@ public class Clouds implements Serializable
     @Override
     public String toString() {
         return "Clouds{" +
-                "all='" + all + '\'' +
+                "all=" + all +
                 '}';
     }
 }

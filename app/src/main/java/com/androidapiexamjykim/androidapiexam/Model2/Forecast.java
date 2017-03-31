@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class WeatherModel2 implements Serializable
+public class Forecast implements Serializable
 {
 
     @SerializedName("cod")
@@ -20,11 +20,11 @@ public class WeatherModel2 implements Serializable
     private String cnt;
     @SerializedName("list")
     @Expose
-    private java.util.List<List> list = null;
+    private java.util.List<com.androidapiexamjykim.androidapiexam.Model2.List> list = null;
     @SerializedName("city")
     @Expose
     private City city;
-    private final static long serialVersionUID = 4437125031390286641L;
+    private final static long serialVersionUID = -5878339930786542103L;
 
     public String getCod() {
         return cod;
@@ -50,11 +50,11 @@ public class WeatherModel2 implements Serializable
         this.cnt = cnt;
     }
 
-    public java.util.List<List> getList() {
+    public java.util.List<com.androidapiexamjykim.androidapiexam.Model2.List> getList() {
         return list;
     }
 
-    public void setList(java.util.List<List> list) {
+    public void setList(java.util.List<com.androidapiexamjykim.androidapiexam.Model2.List> list) {
         this.list = list;
     }
 
@@ -68,10 +68,10 @@ public class WeatherModel2 implements Serializable
 
     @Override
     public String toString() {
-        return "WeatherModel2{" +
+        return "Forecast{" +
                 "cod='" + cod + '\'' +
-                ", message='" + message + '\'' +
-                ", cnt='" + cnt + '\'' +
+                ", message=" + message +
+                ", cnt=" + cnt +
                 ", list=" + list +
                 ", city=" + city +
                 '}';
